@@ -12,7 +12,7 @@ const routes: Routes = [{
       {path: 'post/:id', component: PostPageComponent}
     ]
   },
-  // { path: 'admin', loadChildren: 'src/app/admin/admin.module#AdminModule' }
+  // { path: 'admin', loadChildren: 'src/app/admin/admin.module#AdminModule' } not correct work
   { path: 'admin', loadChildren: () => import('src/app/admin/admin.module').then(m => m.AdminModule) }
 ];
 
