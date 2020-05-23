@@ -6,12 +6,17 @@ import {PostPageComponent} from './post-page/post-page.component';
 
 
 const routes: Routes = [{
-  path: '', component: MainLayoutComponent, children: [
-    {path: '', redirectTo: '/', pathMatch: 'full'},
-    {path: '', component: HomePageComponent},
-    {path: 'post/:id', component: PostPageComponent}
-  ]
-}];
+    path: '', component: MainLayoutComponent, children: [
+      {path: '', redirectTo: '/', pathMatch: 'full'},
+      {path: '', component: HomePageComponent},
+      {path: 'post/:id', component: PostPageComponent}
+    ]
+  },
+  {
+  path: 'admin', loadChildren: './admin/admin.module#AdminModule'
+  }
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
