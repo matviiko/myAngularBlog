@@ -4,7 +4,6 @@ import {FbAuthResponse, User} from '../../../shared/interfaces';
 import {Observable, Subject, throwError} from 'rxjs';
 import {environment} from '../../../../environments/environment';
 import {catchError, tap} from 'rxjs/operators';
-import {threadId} from 'worker_threads';
 
 
 @Injectable ()
