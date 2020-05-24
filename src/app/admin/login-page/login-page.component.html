@@ -27,5 +27,5 @@
       <small *ngIf="form.get('password').errors.minlength" >Please enter more 6 letter </small>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Login</button>
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid || submitted">Login</button>
 </form>
