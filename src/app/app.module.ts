@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {NgModule, Provider} from '@angular/core';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {registerLocaleData} from '@angular/common';
+import englocale from '@angular/common/locales/en';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +13,9 @@ import { PostPageComponent } from './post-page/post-page.component';
 import { PostComponent } from './shared/components/post/post.component';
 import {SharedModule} from './shared/shared.module';
 import {AuthInterceptor} from './shared/auth.interceptor';
+
+
+registerLocaleData(englocale, 'en');
 
 const INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
